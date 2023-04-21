@@ -19,7 +19,6 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             DEFAULT_BUMP: patch
 
-
   simple_deployment_pipeline:
     runs-on: ubuntu-20.04
     steps:
@@ -47,5 +46,5 @@ jobs:
       - name: Deploy app
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
-          service-id: ${{ secrets.RENDER_SERVICE_ID }}
-          api-key: ${{ secrets.RENDER_API_KEY }}
+          service-id: ${{ secrets.RENDERSERVICEID }}
+          api-key: ${{ secrets.RENDERAPIKEY }}
