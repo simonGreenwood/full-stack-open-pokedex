@@ -49,10 +49,6 @@ jobs:
         with:
           service-id: ${{ secrets.RENDERSERVICEID }}
           api-key: ${{ secrets.RENDERAPIKEY }}
-      - name: health check
-        uses: jtalk/url-health-check-action@v3
-        with:  
-          url: https://pokedex-hdsb.onrender.com/
       - name: Job succeeded
         if: ${{ success() }}
         uses: rjstone/discord-webhook-notify@v1
